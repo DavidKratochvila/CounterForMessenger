@@ -78,7 +78,11 @@ class TestMasterWindow(unittest.TestCase):
         # Check if update_data sets the user data correctly after multiple updates
         self.master_window.update_data('John Smith', '/path/to/directory', 'English')
         self.master_window.update_data('Jean Pierre', '/french/path/to/directory', 'Francais')
+        self.master_window.update_data('Singh Smith', '/path/to/directory', 'Hindi')
+        self.master_window.update_data('Jerzy Smith', '/path/to/directory', 'Polski')
         self.master_window.update_data('Janko Hrasko', '/cesta/do/adresara', 'Slovensky')
+        self.master_window.update_data('Tagalog Smith', '/path/to/directory', 'Tagalog')
+        self.master_window.update_data('Greek Smith', '/path/to/directory', 'Ελληνικά')
         self.assertEqual(self.master_window.username, 'Janko Hrasko')
         self.assertEqual(self.master_window.directory, '/cesta/do/adresara')
         self.assertEqual(self.master_window.language, 'Slovensky')
